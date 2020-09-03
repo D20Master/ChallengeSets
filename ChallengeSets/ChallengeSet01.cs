@@ -10,7 +10,7 @@ namespace ChallengeSets
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            return minuend - subtrahend;
         }
 
         public int Add(int number1, int number2)
@@ -30,14 +30,7 @@ namespace ChallengeSets
 
         public string GetGreeting(string nameOfPerson)
         {
-
             return(nameOfPerson == "") ? "Hello!" : $"Hello, {nameOfPerson}!"; 
-
-            //if (nameOfPerson == "")
-            //{
-            //    return "Hello!";
-            //}
-            //return $"Hello, {nameOfPerson}!";
         }
 
         public string GetHey()
