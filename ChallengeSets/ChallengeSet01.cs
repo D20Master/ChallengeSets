@@ -5,7 +5,7 @@ namespace ChallengeSets
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            return num1 == num2;
+           return num1==num2;
         }
 
         public double Subtract(double minuend, double subtrahend)
@@ -30,7 +30,14 @@ namespace ChallengeSets
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+
+            return(nameOfPerson == "") ? "Hello!" : $"Hello, {nameOfPerson}!"; 
+
+            //if (nameOfPerson == "")
+            //{
+            //    return "Hello!";
+            //}
+            //return $"Hello, {nameOfPerson}!";
         }
 
         public string GetHey()
