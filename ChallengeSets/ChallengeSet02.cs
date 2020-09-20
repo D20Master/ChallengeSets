@@ -22,7 +22,7 @@ namespace ChallengeSets
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            return (Math.Abs(num) % 2) == 1;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
