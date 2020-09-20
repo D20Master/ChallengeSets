@@ -51,7 +51,7 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            return (numbers != null) ? numbers.Sum(): 0;
         }
 
         public int SumEvens(int[] numbers)
