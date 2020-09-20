@@ -17,7 +17,7 @@ namespace ChallengeSets
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            return(number % 2) == 0;
         }
 
         public bool IsNumberOdd(int num)
