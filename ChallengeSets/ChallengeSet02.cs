@@ -76,7 +76,7 @@ namespace ChallengeSets
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            return (numbers != null) ? (Math.Abs(numbers.Sum()) % 2) == 1 : false;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
