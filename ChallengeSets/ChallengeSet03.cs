@@ -74,7 +74,7 @@ namespace ChallengeSets
         public char GetLastLetterOfString(string val)
         {
 
-            throw new NotImplementedException();
+            return val[val.Length-1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
