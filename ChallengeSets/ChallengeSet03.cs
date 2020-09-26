@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ChallengeSets
@@ -20,12 +21,48 @@ namespace ChallengeSets
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+
+            int oddTotal = 0;
+
+            foreach (var num in numbers)
+            {
+                if (Math.Abs(num) % 2 == 1)
+                {
+                    oddTotal += Math.Abs(num);
+                }
+            }
+
+            return oddTotal % 2 == 1;
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            bool upperCase = false;
+            bool lowerCase = false;
+            bool numCase= false;
+            foreach (var item in password)
+            {
+                if (Char.IsUpper(item))
+                {
+                    upperCase = true;
+                }
+
+                if (Char.IsLower(item))
+                {
+                    lowerCase = true;
+                }
+
+                if (Char.GetNumericValue(item)>=0)
+                {
+                    numCase = true;
+                }
+            }
+
+            return upperCase && lowerCase && numCase;
         }
 
         public char GetFirstLetterOfString(string val)
