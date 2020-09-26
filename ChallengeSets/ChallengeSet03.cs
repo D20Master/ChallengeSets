@@ -98,9 +98,15 @@ namespace ChallengeSets
             return odds.ToArray();
         }
 
-        public void ChangeAllElementsToUppercase(string[] words)
+        public string[] ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            int i = 0;
+            foreach (var item in words)
+            {
+                words[i] = item.ToUpper();
+                i++;
+            }
+            return words;
         }
     }
 }
