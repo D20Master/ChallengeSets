@@ -44,6 +44,7 @@ namespace ChallengeSets
             bool upperCase = false;
             bool lowerCase = false;
             bool numCase= false;
+
             foreach (var item in password)
             {
                 if (Char.IsUpper(item))
@@ -67,7 +68,7 @@ namespace ChallengeSets
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
