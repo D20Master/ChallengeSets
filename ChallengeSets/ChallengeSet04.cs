@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Linq;
 namespace ChallengeSets
 {
     public class ChallengeSet04
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            return numbers.Where(x => x % 2 == 0).Sum() - numbers.Where(x => x % 2 == 1).Sum();
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
