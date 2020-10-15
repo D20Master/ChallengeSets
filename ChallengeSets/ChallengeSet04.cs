@@ -15,12 +15,12 @@ namespace ChallengeSets
         {
             var lengths = new int[] { str1.Count(), str2.Count(), str3.Count(), str4.Count()};
             return lengths.Min();
-
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            var size = new int[] { number1, number2, number3, number4};
+            return size.Min();
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
