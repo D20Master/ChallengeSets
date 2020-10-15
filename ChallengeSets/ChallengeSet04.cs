@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
+
 namespace ChallengeSets
 {
     public class ChallengeSet04
@@ -11,7 +13,9 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            var lengths = new int[] { str1.Count(), str2.Count(), str3.Count(), str4.Count()};
+            return lengths.Min();
+
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
