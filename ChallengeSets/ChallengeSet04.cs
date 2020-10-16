@@ -35,13 +35,12 @@ namespace ChallengeSets
 
         public bool IsStringANumber(string input)
         {
-            double x = 0;
-            return double.TryParse(input, out x);
+            return double.TryParse(input, out double x);
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            return objs.Count(x => x == null) > objs.Count() - objs.Count(x => x == null);
         }
 
         public double AverageEvens(int[] numbers)
