@@ -57,7 +57,7 @@ namespace ChallengeSets
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            return number == 0 ? 1 :Enumerable.Range(1, number).Aggregate((x, y) => x * y);
         }
     }
 }
