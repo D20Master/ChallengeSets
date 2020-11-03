@@ -38,14 +38,22 @@ namespace ChallengeSets
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
             var sum = 0;
-            for (int i = 0; i < numbers.Length-1; i++)
+            try
             {
-                if (numbers[i]%2 == 0)
+                for (int i = 0; i < numbers.Length - 1; i++)
                 {
-                    sum += numbers[i + 1];
+                    if (numbers[i] % 2 == 0)
+                    {
+                        sum += numbers[i + 1];
+                    }
                 }
+                return sum;
             }
-            return sum;
+            catch
+            {
+                return 0;
+            }
+
         }
 
         public string TurnWordsIntoSentence(string[] words)
@@ -60,8 +68,6 @@ namespace ChallengeSets
             {
                 return "";
             } 
-
-           
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
