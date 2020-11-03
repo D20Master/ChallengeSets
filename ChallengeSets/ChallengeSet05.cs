@@ -50,7 +50,18 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            var sentence = "";
+            try
+            {
+                sentence = string.Join(" ", words.Select(x => x.Replace(" ", string.Empty)).Where(x => x.Length > 0)) + ".";
+                return sentence.Length > 1 ? sentence : "";
+            }
+            catch
+            {
+                return "";
+            } 
+
+           
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
