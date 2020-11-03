@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ChallengeSets
@@ -31,7 +32,7 @@ namespace ChallengeSets
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null ? false : numbers.SequenceEqual(numbers.OrderBy(x => x).ToArray());
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
