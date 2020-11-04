@@ -32,7 +32,15 @@ namespace ChallengeSets
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            return numbers == null ? false : numbers.SequenceEqual(numbers.OrderBy(x => x).ToArray());
+            try
+            {
+                return numbers.Count() == 0 ? false : numbers == null ? false : numbers.SequenceEqual(numbers.OrderBy(x => x).ToArray());
+
+            }
+            catch 
+            {
+                return false;
+            }
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
@@ -72,7 +80,15 @@ namespace ChallengeSets
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return elements.Where(x => x % 4 == 0).ToArray();
+            }      
+            catch 
+            {
+                return new double[0];
+            }
+
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
