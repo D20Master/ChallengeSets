@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ChallengeSets
@@ -7,7 +8,15 @@ namespace ChallengeSets
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
-            throw new NotImplementedException();
+            if (ignoreCase)
+            {
+                var lowerWords = string.Join(" ", words).ToLower();
+                return lowerWords.Contains(word.ToLower());
+            }
+            else
+            {
+                return words.Contains(word);
+            }
         }
 
         public bool IsPrimeNumber(int num)
