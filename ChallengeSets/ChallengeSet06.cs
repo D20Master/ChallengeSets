@@ -61,7 +61,31 @@ namespace ChallengeSets
 
         public int MaxConsecutiveCount(int[] numbers)
         {
-            throw new NotImplementedException();
+            var priorNum = 0;
+            var count = 0;
+            var maxCount = 0;
+
+            foreach (var num in numbers)
+            {
+                if (priorNum == num)
+                {
+                    count++;
+
+                    if (count > maxCount)
+                    {
+                        maxCount = count;
+                    }
+
+                }
+                else
+                {
+                    count = 0;
+                }
+
+                priorNum = num;
+            }
+
+            return maxCount+1;
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
