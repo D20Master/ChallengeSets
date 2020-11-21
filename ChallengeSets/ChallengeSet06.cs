@@ -8,6 +8,11 @@ namespace ChallengeSets
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
+            if (words == null)
+            {
+                return false;
+            }
+
             if (ignoreCase)
             {
                 var lowerWords = string.Join(" ", words).ToLower();
@@ -90,7 +95,20 @@ namespace ChallengeSets
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            throw new NotImplementedException();
+            var nthList = new List<double>();
+
+            if (n<=0 || elements == null)
+            {
+                return nthList.ToArray();
+            }
+
+            for (int i = n - 1; i < elements.Count(); i += n)
+            {
+                nthList.Add(elements[i]);
+            }
+
+            return nthList.ToArray();
+
         }
     }
 }
