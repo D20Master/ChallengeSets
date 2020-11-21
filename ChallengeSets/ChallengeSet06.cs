@@ -48,7 +48,15 @@ namespace ChallengeSets
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var ch = str.ToCharArray().Where(x => str.Count(i => i == x) == 1).Last();
+                return str.IndexOf(ch);
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public int MaxConsecutiveCount(int[] numbers)
