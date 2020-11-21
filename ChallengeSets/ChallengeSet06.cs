@@ -21,7 +21,29 @@ namespace ChallengeSets
 
         public bool IsPrimeNumber(int num)
         {
-            throw new NotImplementedException();
+            if (num == 2)
+            {
+                return true;
+            }
+            else if (num <= 1 || num % 2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                var limit = (int)Math.Floor(Math.Sqrt(num));
+
+                for (int i = 3; i <= limit; i++)
+                {
+                    if (num%i==0)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            
         }
 
         public int IndexOfLastUniqueLetter(string str)
