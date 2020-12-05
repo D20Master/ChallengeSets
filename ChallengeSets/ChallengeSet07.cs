@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 namespace ChallengeSets
 {
     public class ChallengeSet07
@@ -42,8 +42,29 @@ namespace ChallengeSets
 
         public string GetNameOfHighestParentCompany(Business business)
         {
-            // If there is Company A, whose parent is Company B, whose parent is Company C, then given Company A return Company C
-            throw new NotImplementedException();
+           // If there is Company A, whose parent is Company B, whose parent is Company C, then given Company A return Company C
+
+            if (business.ParentCompany == null)
+            {
+                return business.Name;
+            }
+
+            var parent = business.ParentCompany;
+
+            do
+            {
+                if (parent.ParentCompany == null)
+                {
+                    return parent.Name;
+                }
+                else
+                {
+                    parent = parent.ParentCompany;
+                }
+
+            } while (parent != null);
+
+            return null;
         }
 
         public enum TicTacToeResult { X, O, Draw }
