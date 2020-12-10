@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 namespace ChallengeSets
 {
     public class ChallengeSet07
@@ -107,7 +108,16 @@ namespace ChallengeSets
 
         public bool EachArrayInJaggedArrayContainsTargetNumber(int[][] numbers, int targetNumber)
         {
-            throw new NotImplementedException();
+            if (numbers.Length == 0)
+            {
+                return false;
+            }
+            var pass = new List<bool>();
+            foreach (var numSet in numbers)
+            {
+                pass.Add(numSet.Count(x => x == targetNumber)>0);
+            }
+            return pass.Count(x => x == true) == numbers.Length;
         }
     }
 }
